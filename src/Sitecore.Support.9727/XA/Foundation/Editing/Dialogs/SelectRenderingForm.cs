@@ -51,11 +51,11 @@
                         parent.SetExtensibleProperty(base.Renderings, "class", "scDisplayNone");
                     }
                     TreeComparer comparer = new TreeComparer();
-                    foreach (IGrouping<Item, Item> grouping in options.Items.GroupBy<Item, Item>(i => i.Parent, comparer).OrderBy<IGrouping<Item, Item>, Item>(g => g.Key, comparer).ToList<IGrouping<Item, Item>>())
+                    foreach (var grouping in options.Items.GroupBy(i => i.Parent.DisplayName).OrderBy(g => g.Key).ToList())
                     {
                         Tab child = new Tab
                         {
-                            Header = grouping.Key.DisplayName
+                            Header = grouping.Key
                         };
 
                         Scrollbox scrollbox = new Scrollbox

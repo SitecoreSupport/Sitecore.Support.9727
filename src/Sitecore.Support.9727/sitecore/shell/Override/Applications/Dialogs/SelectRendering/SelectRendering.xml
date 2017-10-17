@@ -12,7 +12,7 @@
 	    display: none; }
       </Stylesheet>
 
-      <CodeBeside Type="Sitecore.XA.Foundation.Editing.Dialogs.SelectRenderingForm, Sitecore.XA.Foundation.Editing"/>
+      <CodeBeside Type="Sitecore.Support.XA.Foundation.Editing.Dialogs.SelectRenderingForm, Sitecore.Support.9727"/>
 
       <DataContext ID="DataContext" Root="/"/>
 
